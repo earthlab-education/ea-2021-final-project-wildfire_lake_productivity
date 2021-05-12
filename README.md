@@ -25,9 +25,10 @@ large datasets to retroactively characterize landscapes to understand the driver
    Required packages are found in the repository .yml. Notebooks containing Python script required to collect, review, and analyze data are contained in the "scripts" directory and numbered according to workflow beginning with "01_download_clip_merge".  All datasets can be imported via url and clipped to an area of interest, though script to save large, clipped datasets locally may be used to avoid repeated downloads. Scripts after "01_download_clip_merge" may call these stored clipped and merged datasets for visualization and analysis. Updated project progress may be found in the 'blog_post.ipynb' notebook.
 
 ### Maintainers:
-[Lauren Kremer, 
+Lauren Kremer, 
 Research Associate, 
-Watershed Research Group at Colorado State University](https://avatars.githubusercontent.com/u/70210769?v=4)
+Watershed Research Group at Colorado State University
+![Lauren Kremer](https://avatars.githubusercontent.com/u/70210769?v=4)
      
 ### Contributors:
 [Dr. Matthew V. Ross](https://matthewrvross.com)
