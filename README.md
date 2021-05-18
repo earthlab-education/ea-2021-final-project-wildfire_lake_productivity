@@ -1,7 +1,7 @@
 
 ## Wildfire affected lake color and productivity
 
-This repository uses chebysev center points of lakes in the HydroLakes database and matches them with Monitoring Trends in Burn Severity (MTBS) fire perimeters and AquaSat in-situ data to analyze spatial and temporal pre- and post-wildfire trends in lake color.
+This repository uses chebysev center points of lakes in the HydroLakes database and matches them with Monitoring Trends in Burn Severity (MTBS) fire perimeters and AquaSat in-situ data to analyze lake color and productivity in response to fire.
 
 ### Project goals:
     
@@ -18,7 +18,7 @@ including the Colorado Front Range, rely on forested montane watersheds for clea
 remotely identify the characteristics within a watershed that are correlated to increased algal production will allow 
 for more effective predictions about the effect of wildfire on water supply and support proactive and cost-effective 
 mitigation efforts by civic leaders in the event their water supply is affected by fire. This workflow utilizes several 
-large datasets to retroactively characterize landscapes to understand the drivers of lake responses to fire.
+large datasets to characterize pre- and post-fire landscapes to understand the drivers of lake responses to fire.
 
 ### Running the workflow:
     
@@ -31,7 +31,8 @@ Watershed Research Group at Colorado State University
 ![Lauren Kremer](https://avatars.githubusercontent.com/u/70210769?v=4)
      
 ### Contributors:
-[Dr. Matthew V. Ross](https://matthewrvross.com)
+[Matthew V. Ross, PhD](https://matthewrvross.com)
+Assistant Professor of Water Quality, Colorado State University
 
 ### License & Citation    
 
