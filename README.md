@@ -1,9 +1,6 @@
 
 ## Wildfire affected lake color and productivity
 
-[![DOI](https://zenodo.org/badge/361258764.svg)](https://zenodo.org/badge/latestdoi/361258764)
-
-
 This repository uses chebysev center points of lakes in the HydroLakes database and matches them with Monitoring Trends in Burn Severity (MTBS) fire perimeters and AquaSat in-situ data to analyze lake color and productivity in response to fire.
 
 ### Project goals:
@@ -43,7 +40,7 @@ Assistant Professor of Water Quality, Colorado State University
 Ross, M. R. V., S. N. Topp, A. P. Appling, X. Yang, C. Kuhn, D. Butman, M. Simard, and T. M. Pavelsky. 2019. AquaSat: A Data Set to Enable Remote Sensing of Water Quality for Inland Waters. Water Resources Research 55:10012-10025.
 [DOI: 10.1029/2019WR024883](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019WR024883)
 
-#### LimnoSat
+#### LimnoSat:
 Topp, A. P., T. M. Pavelsky, H. A. Dugan, X. Yang, J. Gradner, M. R. V. Ross. 2021. Shifting Patterns of Summer Lake Color Phenology in Over 26,000 US Lakes. Water Resources Research 57:e2020WR029123.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4139695.svg)](https://doi.org/10.5281/zenodo.4139695)
 
