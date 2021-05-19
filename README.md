@@ -1,6 +1,9 @@
 
 ## Wildfire affected lake color and productivity
 
+[![DOI](https://zenodo.org/badge/361258764.svg)](https://zenodo.org/badge/latestdoi/361258764)
+
+
 This repository uses chebysev center points of lakes in the HydroLakes database and matches them with Monitoring Trends in Burn Severity (MTBS) fire perimeters and AquaSat in-situ data to analyze lake color and productivity in response to fire.
 
 ### Project goals:
@@ -38,3 +41,4 @@ Assistant Professor of Water Quality, Colorado State University
 
 [BSD-3](https://github.com/earthlab/earthpy/blob/main/LICENSE)
 
+[![DOI](https://zenodo.org/badge/361258764.svg)](https://zenodo.org/badge/latestdoi/361258764)
