@@ -15,7 +15,7 @@ def open_zips(url, shapefile):
     -----------
     gpd : a clipped geopandas geodataframe 
     """
-    local_path = 'tmp/'
+    local_path = os.path.join('data')
     print('Downloading shapefile...')
     r = requests.get(url)
     z = zipfile.ZipFile(io.BytesIO(r.content))
