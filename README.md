@@ -1,5 +1,7 @@
 
 ## Wildfire affected lake color and productivity
+[![DOI](https://zenodo.org/badge/361258764.svg)](https://zenodo.org/badge/latestdoi/361258764)
+
 
 This repository uses chebysev center points of lakes in the HydroLakes database and matches them with Monitoring Trends in Burn Severity (MTBS) fire perimeters and AquaSat in-situ data to analyze lake color and productivity in response to fire.
 
@@ -20,9 +22,30 @@ for more effective predictions about the effect of wildfire on water supply and 
 mitigation efforts by civic leaders in the event their water supply is affected by fire. This workflow utilizes several 
 large datasets to characterize pre- and post-fire landscapes to understand the drivers of lake responses to fire.
 
-### Running the workflow:
+### Setup:
     
-   Required packages are found in the repository .yml. Notebooks containing Python script required to collect, review, and analyze data are contained in the "scripts" directory and numbered according to workflow beginning with "01_download_clip_merge".  All datasets can be imported via url and clipped to an area of interest, though script to save large, clipped datasets locally may be used to avoid repeated downloads. Scripts after "01_download_clip_merge" may call these stored clipped and merged datasets for visualization and analysis. Updated project progress may be found in the 'blog_post.ipynb' notebook.
+   Required packages are found in the repository .yml. To set up this repository, you will need to:
+   1. Create the conda envrironment included in the repository
+   2. Install datatools package with 'pip install -e?
+   3. run the main bash script
+   
+#### Conda Environment setup
+    
+  1. In bash, `cd` to the `ea-2021-final-project-wildfire_lake_productivity` repo
+  2. Install the environment file
+  3. Activate the environment
+  4. Install supporting functions 
+
+```
+$ cd ea-2021-final-project-wildfire_lake_productivity
+$ conda env create -f environment.yml
+$ conda activate wildfire-lake-productivity
+$ pip install -e .
+
+```
+#### Data Collection  and analysis 
+
+Notebooks containing Python script required to collect, review, and analyze data are contained in the "scripts" directory and numbered according to workflow beginning with "01_download_clip_merge".  All datasets can be imported via url and clipped to an area of interest, though script to save large, clipped datasets locally may be used to avoid repeated downloads. Scripts after "01_download_clip_merge" may call these stored clipped and merged datasets for visualization and analysis. Updated project progress may be found in the 'blog_post.ipynb' notebook.
 
 ### Maintainers:
 Lauren Kremer, 
@@ -44,8 +67,7 @@ Ross, M. R. V., S. N. Topp, A. P. Appling, X. Yang, C. Kuhn, D. Butman, M. Simar
 Topp, A. P., T. M. Pavelsky, H. A. Dugan, X. Yang, J. Gradner, M. R. V. Ross. 2021. Shifting Patterns of Summer Lake Color Phenology in Over 26,000 US Lakes. Water Resources Research 57:e2020WR029123.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4139695.svg)](https://doi.org/10.5281/zenodo.4139695)
 
-### License & Citation    
+### License   
 
 [BSD-3](https://github.com/earthlab/earthpy/blob/main/LICENSE)
 
-[![DOI](https://zenodo.org/badge/361258764.svg)](https://zenodo.org/badge/latestdoi/361258764)
