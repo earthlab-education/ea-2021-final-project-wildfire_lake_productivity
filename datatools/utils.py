@@ -30,3 +30,14 @@ def open_zips(url, shapefile):
     print("Shape of the dataframe: {}".format(gpdfile.shape))
     print("Projection of dataframe: {}".format(gpdfile.crs))
     return(gpdfile)
+
+
+
+def df_to_gdf(input_df, shapefile):
+    """
+    Convert a DataFrame with longitude and latitude columns
+    to a GeoDataFrame.
+    """
+    geometry = [Point(xy) for xy in zip(input_df.long, input_df.lat)]
+    return gpd.clip(gpd.GeoDataFrame(input_df, crs=shapefile.crs, geometry=geometry), shapefile)
+
