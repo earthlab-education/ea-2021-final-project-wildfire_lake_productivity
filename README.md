@@ -34,7 +34,7 @@ large datasets to characterize pre- and post-fire landscapes to understand the d
   1. In bash, `cd` to the `ea-2021-final-project-wildfire_lake_productivity` repo
   2. Install the environment file
   3. Activate the environment
-  4. Install supporting functions 
+  4. Install supporting functions found in the 'datatools' package
 
 ```
 $ cd ea-2021-final-project-wildfire_lake_productivity
