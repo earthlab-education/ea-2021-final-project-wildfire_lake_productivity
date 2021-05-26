@@ -1,4 +1,4 @@
-name: earth-analytics-python
+name: wildfire-lake-productivity
 channels:
   - conda-forge
   - defaults
@@ -6,22 +6,22 @@ channels:
 dependencies:
   - python=3.7
   - pip
+  
+  # Data management
+  - requests
+  - pyarrow
+  
   # Core scientific python
   - numpy
   - matplotlib
-  - pyqt
   - seaborn
-  - tqdm
-  - kiwisolver
 
   # Spatial packages
-  #- rasterio  
-  - pysal
+  - rasterio  
   - pyproj
   - rasterstats
   - geopy
-  - cartopy
-  #- geopandas
+  - geopandas
   - contextily
   - earthpy
   - folium
@@ -29,7 +29,10 @@ dependencies:
   - mapboxgl
   - hydrofunctions
   - geocoder
-  - tweepy
+  - shapely
+  - earthengine-api
+  - geemap
+  - basemap
 
   # Natural language processing
   - nltk 
@@ -39,10 +42,3 @@ dependencies:
   - autopep8
   - jupyterlab
   - notebook 
-  # Do we need this?
-  - ipython
-  - jupyter_contrib_nbextensions
-  - nbclean
-  # Autograding
-  - matplotcheck
-  - nbgrader=0.5.6
