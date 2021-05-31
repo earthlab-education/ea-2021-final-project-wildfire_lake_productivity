@@ -10,6 +10,7 @@ dependencies:
   # Data management
   - requests
   - pyarrow
+  - feather-format
   
   # Core scientific python
   - numpy
@@ -41,4 +42,5 @@ dependencies:
   # Jupyter Environment
   - autopep8
   - jupyterlab
-  - notebook 
+  - notebook
+  - jupyter_contrib_nbextensions
