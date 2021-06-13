@@ -1,7 +1,9 @@
+import os
 import geopandas as gpd
 import io
 import requests
 import zipfile
+from zipfile import BadZipfile
 
 def open_zips(url, shapefile):
     """opens zipped shapefiles from a url and clips data according to a 
@@ -16,20 +18,28 @@ def open_zips(url, shapefile):
     gpd : a clipped geopandas geodataframe 
     """
     local_path = os.path.join('data')
-    print('Downloading shapefile...')
-    r = requests.get(url)
-    z = zipfile.ZipFile(io.BytesIO(r.content))
-    z.extractall(path=local_path)  # extract to folder
-    filenames = [y for y in sorted(z.namelist()) for ending in [
-        'dbf', 'prj', 'shp', 'shx'] if y.endswith(ending)]
-    print(filenames)
-    dbf, prj, shp, shx = [filename for filename in filenames]
-    gpdfile = gpd.clip(gpd.read_file(
-        local_path + shp).to_crs(shapefile.crs), shapefile)
-    print("Done")
-    print("Shape of the dataframe: {}".format(gpdfile.shape))
-    print("Projection of dataframe: {}".format(gpdfile.crs))
-    return(gpdfile)
+    if url.endswith(".zip"):
+        print("Great - this is a .zip file")
+        r = requests.get(url)
+        if r.status_code == 404:
+            print('Status code 404, check that correct url is provided')
+        else:
+            try:
+                z = zipfile.ZipFile(io.BytesIO(r.content))
+                z.extractall(path=local_path)  # extract to folder
+                filenames = [y for y in sorted(z.namelist()) for ending in ['dbf', 'prj', 'shp', 'shx'] if y.endswith(ending)]
+                print(filenames)
+                dbf, prj, shp, shx = [filename for filename in filenames]
+                gpdfile = gpd.overlay(gpd.read_file(local_path + '/' + shp).to_crs(shapefile.crs), shapefile, how = 'intersection')
+                print("Done")
+                print("Shape of the dataframe: {}".format(gpdfile.shape))
+                print("Projection of dataframe: {}".format(gpdfile.crs))
+                return(gpdfile)
+            except BadZipfile:
+                print("url and data format (.zip) should be OK, check for other errors")
+    else:
+        print("Url does not end in .zip. Check file format, open_zips wants to open zipped files")
+
 
 
 
