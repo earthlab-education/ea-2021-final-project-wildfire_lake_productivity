@@ -4,7 +4,7 @@ channels:
   - defaults
 
 dependencies:
-  - python=3.7
+  - python=3.8
   - pip
   
   # Data management
@@ -15,7 +15,10 @@ dependencies:
   # Core scientific python
   - numpy
   - matplotlib
+  - pyqt
   - seaborn
+  - tqdm
+  - kiwisolver
 
   # Spatial packages
   - rasterio  
@@ -28,19 +31,27 @@ dependencies:
   - folium
   - geojson
   - mapboxgl
-  - hydrofunctions
   - geocoder
   - shapely
+  - basemap
+  
+  # GEE packages
+  - google-colab
   - earthengine-api
   - geemap
-  - basemap
+  - hydrofunctions
+  - altair
 
   # Natural language processing
   - nltk 
   - textblob
 
   # Jupyter Environment
+  - papermill
   - autopep8
   - jupyterlab
   - notebook
+  - ipython
   - jupyter_contrib_nbextensions
+  - nbclean
+  - nbresuse
