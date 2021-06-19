@@ -26,8 +26,8 @@ large datasets to characterize pre- and post-fire landscapes to understand the d
     
    Required packages are found in the repository .yml. To set up this repository, you will need to:
    1. Create the conda envrironment included in the repository
-   2. Install datatools package with 'pip install -e?
-   3. run the main bash script
+   2. Install datatools package with 'pip install -e .'
+   3. Run desired notebooks in Jupyter
    
 #### Conda Environment setup
     
@@ -41,6 +41,7 @@ $ cd ea-2021-final-project-wildfire_lake_productivity
 $ conda env create -f environment.yml
 $ conda activate wildfire-lake-productivity
 $ pip install -e .
+$ jupyter notebook
 
 ```
 #### Data Collection  and analysis 
