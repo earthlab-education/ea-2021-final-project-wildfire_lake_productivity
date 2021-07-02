@@ -19,6 +19,9 @@ dependencies:
   - seaborn
   - tqdm
   - kiwisolver
+  - scikit-learn
+  - pydot
+  - python-graphviz
 
   # Spatial packages
   - rasterio  
@@ -34,6 +37,7 @@ dependencies:
   - geocoder
   - shapely
   - basemap
+  - elevation
   
   # GEE packages
   - google-colab
